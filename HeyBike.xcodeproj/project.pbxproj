@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		853D48BB1CDD76A1007812B5 /* NewPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D48BA1CDD76A1007812B5 /* NewPlaceVC.swift */; };
+		853D48BD1CDD76C4007812B5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D48BC1CDD76C4007812B5 /* MapVC.swift */; };
+		853D48C21CDD771C007812B5 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D48C11CDD771C007812B5 /* Parking.swift */; };
+		853D48C51CDD7755007812B5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853D48C31CDD7755007812B5 /* Realm.framework */; };
+		853D48C61CDD7755007812B5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853D48C41CDD7755007812B5 /* RealmSwift.framework */; };
+		853D48C91CDD8385007812B5 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D48C81CDD8385007812B5 /* MapPin.swift */; };
+		85496E6D1CDE2BEF001E7BC8 /* ShowParkingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85496E6C1CDE2BEF001E7BC8 /* ShowParkingVC.swift */; };
+		85FA91D51CDD76210032A5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA91D41CDD76210032A5FC /* AppDelegate.swift */; };
+		85FA91DA1CDD76210032A5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA91D81CDD76210032A5FC /* Main.storyboard */; };
+		85FA91DC1CDD76210032A5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FA91DB1CDD76210032A5FC /* Assets.xcassets */; };
+		85FA91DF1CDD76210032A5FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA91DD1CDD76210032A5FC /* LaunchScreen.storyboard */; };
+		85FA91EA1CDD76220032A5FC /* HeyBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA91E91CDD76220032A5FC /* HeyBikeTests.swift */; };
+		85FA91F51CDD76220032A5FC /* HeyBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA91F41CDD76220032A5FC /* HeyBikeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85FA91E61CDD76220032A5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85FA91C91CDD76210032A5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85FA91D01CDD76210032A5FC;
+			remoteInfo = HeyBike;
+		};
+		85FA91F11CDD76220032A5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85FA91C91CDD76210032A5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85FA91D01CDD76210032A5FC;
+			remoteInfo = HeyBike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		853D48BA1CDD76A1007812B5 /* NewPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlaceVC.swift; sourceTree = "<group>"; };
+		853D48BC1CDD76C4007812B5 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		853D48C11CDD771C007812B5 /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
+		853D48C31CDD7755007812B5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		853D48C41CDD7755007812B5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		853D48C81CDD8385007812B5 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		85496E6C1CDE2BEF001E7BC8 /* ShowParkingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowParkingVC.swift; sourceTree = "<group>"; };
+		85FA91D11CDD76210032A5FC /* HeyBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FA91D41CDD76210032A5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85FA91D91CDD76210032A5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85FA91DB1CDD76210032A5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85FA91DE1CDD76210032A5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85FA91E01CDD76210032A5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85FA91E51CDD76220032A5FC /* HeyBikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyBikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FA91E91CDD76220032A5FC /* HeyBikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBikeTests.swift; sourceTree = "<group>"; };
+		85FA91EB1CDD76220032A5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85FA91F01CDD76220032A5FC /* HeyBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FA91F41CDD76220032A5FC /* HeyBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBikeUITests.swift; sourceTree = "<group>"; };
+		85FA91F61CDD76220032A5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85FA91CE1CDD76210032A5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853D48C51CDD7755007812B5 /* Realm.framework in Frameworks */,
+				853D48C61CDD7755007812B5 /* RealmSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FA91E21CDD76220032A5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FA91ED1CDD76220032A5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		853D48BE1CDD76DF007812B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85FA91D81CDD76210032A5FC /* Main.storyboard */,
+				85FA91DD1CDD76210032A5FC /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		853D48BF1CDD76E5007812B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				853D48BA1CDD76A1007812B5 /* NewPlaceVC.swift */,
+				853D48BC1CDD76C4007812B5 /* MapVC.swift */,
+				85496E6C1CDE2BEF001E7BC8 /* ShowParkingVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		853D48C01CDD76EA007812B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				853D48C11CDD771C007812B5 /* Parking.swift */,
+				853D48C81CDD8385007812B5 /* MapPin.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		85FA91C81CDD76210032A5FC = {
+			isa = PBXGroup;
+			children = (
+				853D48C31CDD7755007812B5 /* Realm.framework */,
+				853D48C41CDD7755007812B5 /* RealmSwift.framework */,
+				85FA91D31CDD76210032A5FC /* HeyBike */,
+				85FA91E81CDD76220032A5FC /* HeyBikeTests */,
+				85FA91F31CDD76220032A5FC /* HeyBikeUITests */,
+				85FA91D21CDD76210032A5FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85FA91D21CDD76210032A5FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85FA91D11CDD76210032A5FC /* HeyBike.app */,
+				85FA91E51CDD76220032A5FC /* HeyBikeTests.xctest */,
+				85FA91F01CDD76220032A5FC /* HeyBikeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85FA91D31CDD76210032A5FC /* HeyBike */ = {
+			isa = PBXGroup;
+			children = (
+				853D48C01CDD76EA007812B5 /* Model */,
+				853D48BF1CDD76E5007812B5 /* Controller */,
+				853D48BE1CDD76DF007812B5 /* View */,
+				85FA91D41CDD76210032A5FC /* AppDelegate.swift */,
+				85FA91DB1CDD76210032A5FC /* Assets.xcassets */,
+				85FA91E01CDD76210032A5FC /* Info.plist */,
+			);
+			path = HeyBike;
+			sourceTree = "<group>";
+		};
+		85FA91E81CDD76220032A5FC /* HeyBikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				85FA91E91CDD76220032A5FC /* HeyBikeTests.swift */,
+				85FA91EB1CDD76220032A5FC /* Info.plist */,
+			);
+			path = HeyBikeTests;
+			sourceTree = "<group>";
+		};
+		85FA91F31CDD76220032A5FC /* HeyBikeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85FA91F41CDD76220032A5FC /* HeyBikeUITests.swift */,
+				85FA91F61CDD76220032A5FC /* Info.plist */,
+			);
+			path = HeyBikeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85FA91D01CDD76210032A5FC /* HeyBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85FA91F91CDD76220032A5FC /* Build configuration list for PBXNativeTarget "HeyBike" */;
+			buildPhases = (
+				85FA91CD1CDD76210032A5FC /* Sources */,
+				85FA91CE1CDD76210032A5FC /* Frameworks */,
+				85FA91CF1CDD76210032A5FC /* Resources */,
+				853D48C71CDD775C007812B5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeyBike;
+			productName = HeyBike;
+			productReference = 85FA91D11CDD76210032A5FC /* HeyBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85FA91E41CDD76220032A5FC /* HeyBikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85FA91FC1CDD76220032A5FC /* Build configuration list for PBXNativeTarget "HeyBikeTests" */;
+			buildPhases = (
+				85FA91E11CDD76220032A5FC /* Sources */,
+				85FA91E21CDD76220032A5FC /* Frameworks */,
+				85FA91E31CDD76220032A5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85FA91E71CDD76220032A5FC /* PBXTargetDependency */,
+			);
+			name = HeyBikeTests;
+			productName = HeyBikeTests;
+			productReference = 85FA91E51CDD76220032A5FC /* HeyBikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85FA91EF1CDD76220032A5FC /* HeyBikeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85FA91FF1CDD76220032A5FC /* Build configuration list for PBXNativeTarget "HeyBikeUITests" */;
+			buildPhases = (
+				85FA91EC1CDD76220032A5FC /* Sources */,
+				85FA91ED1CDD76220032A5FC /* Frameworks */,
+				85FA91EE1CDD76220032A5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85FA91F21CDD76220032A5FC /* PBXTargetDependency */,
+			);
+			name = HeyBikeUITests;
+			productName = HeyBikeUITests;
+			productReference = 85FA91F01CDD76220032A5FC /* HeyBikeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85FA91C91CDD76210032A5FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Niklas Gundlev";
+				TargetAttributes = {
+					85FA91D01CDD76210032A5FC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					85FA91E41CDD76220032A5FC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 85FA91D01CDD76210032A5FC;
+					};
+					85FA91EF1CDD76220032A5FC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 85FA91D01CDD76210032A5FC;
+					};
+				};
+			};
+			buildConfigurationList = 85FA91CC1CDD76210032A5FC /* Build configuration list for PBXProject "HeyBike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85FA91C81CDD76210032A5FC;
+			productRefGroup = 85FA91D21CDD76210032A5FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85FA91D01CDD76210032A5FC /* HeyBike */,
+				85FA91E41CDD76220032A5FC /* HeyBikeTests */,
+				85FA91EF1CDD76220032A5FC /* HeyBikeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85FA91CF1CDD76210032A5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FA91DF1CDD76210032A5FC /* LaunchScreen.storyboard in Resources */,
+				85FA91DC1CDD76210032A5FC /* Assets.xcassets in Resources */,
+				85FA91DA1CDD76210032A5FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FA91E31CDD76220032A5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FA91EE1CDD76220032A5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		853D48C71CDD775C007812B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85FA91CD1CDD76210032A5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853D48C21CDD771C007812B5 /* Parking.swift in Sources */,
+				853D48C91CDD8385007812B5 /* MapPin.swift in Sources */,
+				853D48BD1CDD76C4007812B5 /* MapVC.swift in Sources */,
+				85FA91D51CDD76210032A5FC /* AppDelegate.swift in Sources */,
+				85496E6D1CDE2BEF001E7BC8 /* ShowParkingVC.swift in Sources */,
+				853D48BB1CDD76A1007812B5 /* NewPlaceVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FA91E11CDD76220032A5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FA91EA1CDD76220032A5FC /* HeyBikeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FA91EC1CDD76220032A5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FA91F51CDD76220032A5FC /* HeyBikeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85FA91E71CDD76220032A5FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85FA91D01CDD76210032A5FC /* HeyBike */;
+			targetProxy = 85FA91E61CDD76220032A5FC /* PBXContainerItemProxy */;
+		};
+		85FA91F21CDD76220032A5FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85FA91D01CDD76210032A5FC /* HeyBike */;
+			targetProxy = 85FA91F11CDD76220032A5FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85FA91D81CDD76210032A5FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85FA91D91CDD76210032A5FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85FA91DD1CDD76210032A5FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85FA91DE1CDD76210032A5FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85FA91F71CDD76220032A5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85FA91F81CDD76220032A5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85FA91FA1CDD76220032A5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HeyBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		85FA91FB1CDD76220032A5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HeyBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		85FA91FD1CDD76220032A5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HeyBikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeyBike.app/HeyBike";
+			};
+			name = Debug;
+		};
+		85FA91FE1CDD76220032A5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HeyBikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeyBike.app/HeyBike";
+			};
+			name = Release;
+		};
+		85FA92001CDD76220032A5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HeyBikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HeyBike;
+			};
+			name = Debug;
+		};
+		85FA92011CDD76220032A5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HeyBikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HeyBike;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85FA91CC1CDD76210032A5FC /* Build configuration list for PBXProject "HeyBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FA91F71CDD76220032A5FC /* Debug */,
+				85FA91F81CDD76220032A5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85FA91F91CDD76220032A5FC /* Build configuration list for PBXNativeTarget "HeyBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FA91FA1CDD76220032A5FC /* Debug */,
+				85FA91FB1CDD76220032A5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85FA91FC1CDD76220032A5FC /* Build configuration list for PBXNativeTarget "HeyBikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FA91FD1CDD76220032A5FC /* Debug */,
+				85FA91FE1CDD76220032A5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85FA91FF1CDD76220032A5FC /* Build configuration list for PBXNativeTarget "HeyBikeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FA92001CDD76220032A5FC /* Debug */,
+				85FA92011CDD76220032A5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85FA91C91CDD76210032A5FC /* Project object */;
+}
