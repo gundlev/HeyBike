@@ -14,6 +14,8 @@
 		853D48C61CDD7755007812B5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853D48C41CDD7755007812B5 /* RealmSwift.framework */; };
 		853D48C91CDD8385007812B5 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D48C81CDD8385007812B5 /* MapPin.swift */; };
 		85496E6D1CDE2BEF001E7BC8 /* ShowParkingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85496E6C1CDE2BEF001E7BC8 /* ShowParkingVC.swift */; };
+		85496E731CDE471C001E7BC8 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85496E711CDE471C001E7BC8 /* SCLAlertView.swift */; };
+		85496E741CDE471C001E7BC8 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85496E721CDE471C001E7BC8 /* SCLExtensions.swift */; };
 		85FA91D51CDD76210032A5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA91D41CDD76210032A5FC /* AppDelegate.swift */; };
 		85FA91DA1CDD76210032A5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA91D81CDD76210032A5FC /* Main.storyboard */; };
 		85FA91DC1CDD76210032A5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FA91DB1CDD76210032A5FC /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		853D48C41CDD7755007812B5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		853D48C81CDD8385007812B5 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		85496E6C1CDE2BEF001E7BC8 /* ShowParkingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowParkingVC.swift; sourceTree = "<group>"; };
+		85496E711CDE471C001E7BC8 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		85496E721CDE471C001E7BC8 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		85FA91D11CDD76210032A5FC /* HeyBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FA91D41CDD76210032A5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85FA91D91CDD76210032A5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +120,24 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		85496E6F1CDE46D8001E7BC8 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				85496E701CDE46E8001E7BC8 /* SCLAlertView */,
+			);
+			name = "Supporting files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		85496E701CDE46E8001E7BC8 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				85496E711CDE471C001E7BC8 /* SCLAlertView.swift */,
+				85496E721CDE471C001E7BC8 /* SCLExtensions.swift */,
+			);
+			name = SCLAlertView;
+			sourceTree = "<group>";
+		};
 		85FA91C81CDD76210032A5FC = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +163,7 @@
 		85FA91D31CDD76210032A5FC /* HeyBike */ = {
 			isa = PBXGroup;
 			children = (
+				85496E6F1CDE46D8001E7BC8 /* Supporting files */,
 				853D48C01CDD76EA007812B5 /* Model */,
 				853D48BF1CDD76E5007812B5 /* Controller */,
 				853D48BE1CDD76DF007812B5 /* View */,
@@ -238,6 +261,7 @@
 				TargetAttributes = {
 					85FA91D01CDD76210032A5FC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 62PHHA9WNZ;
 					};
 					85FA91E41CDD76220032A5FC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -319,11 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85496E741CDE471C001E7BC8 /* SCLExtensions.swift in Sources */,
 				853D48C21CDD771C007812B5 /* Parking.swift in Sources */,
 				853D48C91CDD8385007812B5 /* MapPin.swift in Sources */,
 				853D48BD1CDD76C4007812B5 /* MapVC.swift in Sources */,
 				85FA91D51CDD76210032A5FC /* AppDelegate.swift in Sources */,
 				85496E6D1CDE2BEF001E7BC8 /* ShowParkingVC.swift in Sources */,
+				85496E731CDE471C001E7BC8 /* SCLAlertView.swift in Sources */,
 				853D48BB1CDD76A1007812B5 /* NewPlaceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +492,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -474,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -481,6 +510,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -489,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.gundlev.HeyBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

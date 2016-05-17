@@ -15,13 +15,15 @@ class MapPin : NSObject, MKAnnotation, Comparable {
     var subtitle: String?
     var image: UIImage?
     var timestamp: Int
+    var parkingId: String
     
-    init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String, image: UIImage?, timestamp: Int) {
+    init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String, image: UIImage?, timestamp: Int, parkingId: String) {
         self.coordinate = coordinate
         self.title = title
         self.subtitle = subtitle
         self.image = image
         self.timestamp = timestamp
+        self.parkingId = parkingId
     }
 }
 

@@ -17,6 +17,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
     var parkings: Results<Parking>!
     var latestPin: MapPin?
     var chosenPin: MapPin?
+    var pins = [MapPin]()
     
     @IBOutlet weak var NewButton: UIButton!
     @IBOutlet weak var latestButton: UIButton!
@@ -34,7 +35,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
     }
     
     override func viewDidLoad() {
-        
+        mapView.showsUserLocation = true
         let anyParkings = getAllSaved()
         var pinArr = [MapPin]()
         if anyParkings {
@@ -48,17 +49,12 @@ class MapVC: UIViewController, MKMapViewDelegate {
                 let timeStamp = NSDateFormatter()
                 timeStamp.dateFormat = "d. MMM yyyy"
                 let timeCapture = timeStamp.stringFromDate(date)
-                let mapPin = MapPin(coordinate: CLLocationCoordinate2D(latitude: parking.lat, longitude: parking.lng), title: timeCapture, subtitle: parking.comment, image: image, timestamp: parking.timestamp)
+                let mapPin = MapPin(coordinate: CLLocationCoordinate2D(latitude: parking.lat, longitude: parking.lng), title: timeCapture, subtitle: parking.comment, image: image, timestamp: parking.timestamp, parkingId: parking.parkingId)
                 self.mapView.addAnnotation(mapPin)
                 pinArr.append(mapPin)
             }
-            var latestPin = pinArr[0]
-            for pin in pinArr {
-                if pin > latestPin {
-                    latestPin = pin
-                }
-            }
-            self.latestPin = latestPin
+            self.pins = pinArr
+            findLatestPin()
             self.zoomToFitMapAnnotations(self.mapView)
         } else {
             print("There are no saved parkings")
@@ -66,6 +62,33 @@ class MapVC: UIViewController, MKMapViewDelegate {
         }
         
         latestButton.layer.cornerRadius = 10
+    }
+    
+    func findLatestPin() {
+        if !self.pins.isEmpty {
+            var latestPin = self.pins[0]
+            for pin in self.pins {
+                if pin > latestPin {
+                    latestPin = pin
+                }
+            }
+            self.latestPin = latestPin
+        } else {
+            self.latestPin = nil
+        }
+    }
+    
+    
+    func deleteCurrentParking() {
+        let parkings = realm.objects(Parking).filter("parkingId = %@", (self.chosenPin?.parkingId)!)
+        try! realm.write() {
+            realm.delete(parkings[0])
+        }
+        mapView.removeAnnotation(self.chosenPin!)
+        let index = self.pins.indexOf(self.chosenPin!)
+        self.pins.removeAtIndex(index!)
+        findLatestPin()
+        self.chosenPin = nil
     }
     
     func getAllSaved() -> Bool {
@@ -105,8 +128,8 @@ class MapVC: UIViewController, MKMapViewDelegate {
         var region: MKCoordinateRegion = MKCoordinateRegion()
         region.center.latitude = topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) * 0.5
         region.center.longitude = topLeftCoord.longitude + (bottomRightCoord.longitude - topLeftCoord.longitude) * 0.5
-        region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.4
-        region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.4
+        region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.8
+        region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.8
         region = aMapView.regionThatFits(region)
         aMapView.setRegion(region, animated: true)
     }
@@ -161,6 +184,8 @@ class MapVC: UIViewController, MKMapViewDelegate {
         return nil
 
     }
+    
+    
     
     func showParking() {
         performSegueWithIdentifier("showParking", sender: self)

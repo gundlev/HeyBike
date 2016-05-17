@@ -20,6 +20,9 @@ class NewPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var newPin: MapPin?
     
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var visualEffectsView: UIVisualEffectView!
+    @IBOutlet weak var VESUbView: UIView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
@@ -44,17 +47,47 @@ class NewPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             let timeStamp = NSDateFormatter()
             timeStamp.dateFormat = "d. MMM yyyy"
             let timeCapture = timeStamp.stringFromDate(date)
-            self.newPin = MapPin(coordinate: CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!), title: timeCapture, subtitle: self.textView.text, image: self.currentImage, timestamp: parking.timestamp)
+            self.newPin = MapPin(coordinate: CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!), title: timeCapture, subtitle: self.textView.text, image: self.currentImage, timestamp: timestamp, parkingId: id)
             self.currentImage = nil
             performSegueWithIdentifier("exitAfterDone", sender: self)
         } else {
-            //user need to take a photo
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false
+            )
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("OK") {}
+            alertView.showWarning("Missing Image", subTitle: "\nPlease add an image of where you parked your bike. You will be happy you did.") // Warning
         }
     }
     
     override func viewDidLoad() {
         self.saveButton.layer.cornerRadius = 10
         textView.layer.cornerRadius = 10
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        self.addButton.enabled = false
+        let info:NSDictionary = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardHeight: CGFloat = keyboardSize.height
+        let _: CGFloat = info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber as CGFloat
+        UIView.animateWithDuration(0.25, delay: 0.25, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.VESUbView.frame = CGRectMake(0, (self.VESUbView.frame.origin.y - (keyboardHeight * 0.75)), self.visualEffectsView.bounds.width, self.visualEffectsView.bounds.height)
+            }, completion: nil)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.addButton.enabled = true
+        let info: NSDictionary = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardHeight: CGFloat = keyboardSize.height
+        let _: CGFloat = info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber as CGFloat
+        UIView.animateWithDuration(0.25, delay: 0.25, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.VESUbView.frame = CGRectMake(0, (self.VESUbView.frame.origin.y + (keyboardHeight * 0.75)), self.visualEffectsView.bounds.width, self.visualEffectsView.bounds.height)
+            }, completion: nil)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -112,6 +145,7 @@ class NewPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         self.imageView.image = image
         self.currentImage = image
+        self.addButton.titleLabel?.text = ""
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -138,6 +172,8 @@ class NewPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             if self.newPin != nil {
                 let vc = segue.destinationViewController as! MapVC
                 vc.mapView.addAnnotation(self.newPin!)
+                vc.latestPin = newPin
+                vc.pins.append(newPin!)
                 vc.zoomToFitMapAnnotations(vc.mapView)
             }
         }
