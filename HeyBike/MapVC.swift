@@ -47,7 +47,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
                 
                 let date = NSDate(timeIntervalSince1970: NSTimeInterval(parking.timestamp))
                 let timeStamp = NSDateFormatter()
-                timeStamp.dateFormat = "d. MMM yyyy"
+                timeStamp.dateFormat = "d. MMM yyyy - HH:mm"
                 let timeCapture = timeStamp.stringFromDate(date)
                 let mapPin = MapPin(coordinate: CLLocationCoordinate2D(latitude: parking.lat, longitude: parking.lng), title: timeCapture, subtitle: parking.comment, image: image, timestamp: parking.timestamp, parkingId: parking.parkingId)
                 self.mapView.addAnnotation(mapPin)
